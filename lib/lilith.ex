@@ -7,10 +7,7 @@ defmodule Lilith do
   def start(_args, _opts) do
     Logger.info("Booting up...")
 
-    web = {Bandit, plug: Lilith.API.Router, scheme: :http, port: 5489}
-    bot = Lilith.Bot.Events
-
-    children = [web, bot]
+    children = [{Bandit, plug: Lilith.API.Router, scheme: :http, port: 5489}, Lilith.Bot.Events]
 
     Supervisor.start_link(children, name: Lilith.Supervisor, strategy: :one_for_one)
   end
