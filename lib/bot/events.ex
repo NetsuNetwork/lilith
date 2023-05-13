@@ -7,16 +7,9 @@ defmodule Lilith.Bot.Events do
   import Logger
 
   def handle_event({:MESSAGE_CREATE, payload, _ws_state}) do
-    Logger.info("Parsing a command")
-
     case Commander.parse(payload.content) do
-      {command, args} ->
-        IO.puts(command)
-        IO.puts(args)
-        Commands.exec(payload, command, args)
-
-      nil ->
-        :ignore
+      {:ok, command, args} -> Commands.exec(payload, command, args)
+      _ -> :ignore
     end
 
     :noop

@@ -2,7 +2,7 @@ defmodule Lilith.Bot.Commander do
   @moduledoc false
   @prefix "%"
 
-  @spec parse(String.t()) :: nil | {String.t(), list(String.t())}
+  @spec parse(String.t()) :: {:ok, String.t(), list(String.t())} | {:error, String.t()}
   def parse(content) do
     if String.starts_with?(content, @prefix) do
       args =
@@ -13,9 +13,9 @@ defmodule Lilith.Bot.Commander do
       command = args |> List.first()
       args = args |> List.delete_at(0)
 
-      {command, args}
+      {:ok, command, args}
+    else
+      {:error, "Could not parse message"}
     end
-
-    nil
   end
 end
