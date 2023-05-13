@@ -1,18 +1,17 @@
 defmodule Lilith do
-  @moduledoc """
-  Documentation for `Lilith`.
-  """
+  @moduledoc false
 
-  @doc """
-  Hello world.
+  use Application
+  require Logger
 
-  ## Examples
+  def start(_args, _opts) do
+    Logger.info("Booting up...")
 
-      iex> Lilith.hello()
-      :world
+    web = {Bandit, plug: Lilith.API.Router, scheme: :http, port: 5489}
+    bot = Lilith.Bot.Events
 
-  """
-  def hello do
-    :world
+    children = [web, bot]
+
+    Supervisor.start_link(children, name: Lilith.Supervisor, strategy: :one_for_one)
   end
 end

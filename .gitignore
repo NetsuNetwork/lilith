@@ -24,3 +24,8 @@ lilith-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Ignore any Environment files
+.env*
+# This is okay, as an example
+!.env.example

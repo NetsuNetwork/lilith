@@ -14,7 +14,8 @@ defmodule Lilith.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger],
+      mod: {Lilith, []}
     ]
   end
 
@@ -28,6 +29,7 @@ defmodule Lilith.MixProject do
       {:jason, "~> 1.4"},
       {:nostrum, "~> 0.7.0-rc2"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:dotenvy, "~> 0.7.0", only: [:dev, :test]}
     ]
   end
 end
