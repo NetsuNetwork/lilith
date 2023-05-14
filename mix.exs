@@ -30,7 +30,7 @@ defmodule Lilith.MixProject do
       {:nostrum, "~> 0.7.0-rc2"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:dotenvy, "~> 0.7.0", only: [:dev, :test]},
-      {:craft, only: [:dev], git: "https://github.com/NetsuNetwork/craft", tag: "0.2.0"},
+      {:craft, only: [:dev], git: "https://github.com/NetsuNetwork/craft", tag: "v0.3.1"},
     ]
   end
 end

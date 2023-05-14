@@ -4,7 +4,7 @@
   "certifi": {:hex, :certifi, "2.11.0", "5adfe37ceb8569d019f836944aeaf27f8ac391dacaf3707f570c155b7e03aaa8", [:rebar3], [], "hexpm", "9e37e0542ec3fabaa19a0734b3900dc095797fac48c40a2a9741d8ad5e3c9bb7"},
   "chacha20": {:hex, :chacha20, "1.0.4", "0359d8f9a32269271044c1b471d5cf69660c362a7c61a98f73a05ef0b5d9eb9e", [:mix], [], "hexpm", "2027f5d321ae9903f1f0da7f51b0635ad6b8819bc7fe397837930a2011bc2349"},
   "cowlib": {:hex, :cowlib, "2.12.1", "a9fa9a625f1d2025fe6b462cb865881329b5caff8f1854d1cbc9f9533f00e1e1", [:make, :rebar3], [], "hexpm", "163b73f6367a7341b33c794c4e88e7dbfe6498ac42dcd69ef44c5bc5507c8db0"},
-  "craft": {:git, "https://github.com/NetsuNetwork/craft", "d885b91902f5b117d0a68e475a83e7a94401cc3c", [tag: "0.2.0"]},
+  "craft": {:git, "https://github.com/NetsuNetwork/craft", "46ed2feaf4a79d29848e9838b339fef5e1aff781", [tag: "v0.3.1"]},
   "credo": {:hex, :credo, "1.7.0", "6119bee47272e85995598ee04f2ebbed3e947678dee048d10b5feca139435f75", [:mix], [{:bunt, "~> 0.2.1", [hex: :bunt, repo: "hexpm", optional: false]}, {:file_system, "~> 0.2.8", [hex: :file_system, repo: "hexpm", optional: false]}, {:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: false]}], "hexpm", "6839fcf63d1f0d1c0f450abc8564a57c43d644077ab96f2934563e68b8a769d7"},
   "curve25519": {:hex, :curve25519, "1.0.5", "f801179424e4012049fcfcfcda74ac04f65d0ffceeb80e7ef1d3352deb09f5bb", [:mix], [], "hexpm", "0fba3ad55bf1154d4d5fc3ae5fb91b912b77b13f0def6ccb3a5d58168ff4192d"},
   "dotenvy": {:hex, :dotenvy, "0.7.0", "a4a21db71d11e2e9a25eef7533d8a7cf793cc4b15d10fe149f063977ecf0e5f5", [:mix], [], "hexpm", "7895e8129fd75cb46d29fe6929bb568f816e511c0629bef550b5f75a0666aa16"},
