@@ -4,7 +4,7 @@ defmodule Lilith.MixProject do
   def project do
     [
       app: :lilith,
-      version: "0.2.1",
+      version: "0.2.2",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -30,7 +30,7 @@ defmodule Lilith.MixProject do
       {:nostrum, "~> 0.7.0-rc2"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:dotenvy, "~> 0.7.0", only: [:dev, :test]},
-      {:craft, "~> 0.2.0", only: [:dev], git: "https://github.com/NetsuNetwork/craft"},
+      {:craft, only: [:dev], git: "https://github.com/NetsuNetwork/craft", tag: "0.2.0"},
     ]
   end
 end
